@@ -91,7 +91,7 @@ const actualizarTask = async (req, res) => {
       if (task.user.toString() !== userId) {
         return res.status(401).json({
           ok: false,
-          msg: 'Unauthorized',
+          msg: 'No autorizado',
         });
       }
   
@@ -99,7 +99,7 @@ const actualizarTask = async (req, res) => {
   
       res.json({
         ok: true,
-        msg: 'Task deleted',
+        msg: 'Task eliminada',
       });
     } catch (error) {
       console.log(error);
